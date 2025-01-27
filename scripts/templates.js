@@ -1,8 +1,11 @@
 
 function getBookTemplate(name, author, likes, liked, price, publishedYear, genre, commentText, bookIndex) {
   return `<div id="singleBookElement" class="singleBookElement" >
-        <h2 id="singleBookName" class="singleBookName">${name}</h2>
+  <div class="upperSection">
+  <h2 id="singleBookName" class="singleBookName">${name}</h2>
         <img src="./assets/img/book_logo.jpg" class="book_picture" alt="book_picture">
+  </div>
+        
         <table id="book_info" class="book_info">
             <tr>
               <th id="bookPrice" class="bookPrice">${price} €</th>
