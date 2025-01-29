@@ -1,62 +1,35 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bookstore</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./styles/standard.css">
-    <link rel="stylesheet" href="./fonts/fonts.css">
-    
-    <script src="./scripts/localstorage.js"></script>
-    <script src="./scripts/db.js"></script>
-    <script src="./scripts/templates.js"></script>
-    <script src="./scripts/events.js"></script>
-    <script src="./script.js"></script>
-</head>
-<body onload="startRender()">
-    <nav>
-        <div class="nav_div">
-            <img class="nav_image" src="./assets/img/book_logo.svg" alt="favicon">
-            <span class="nav_span">Bookstore</span>
-        </div>
-    </nav>
-    <section id="renderSection" class="renderSection"></section>
-    <div id="bookRenderTemplateSection" class="bookRenderTemplateSection"  >
-    </div>
-  
-    <!-- <div id="singleBookElement" class="singleBookElement">
-        <h2 id="singleBookName" class="singleBookName">singleBookName</h2>
-        <img src="./assets/img/book_logo.jpg" class="book_picture" alt="book_picture">
-        <table id="book_info" class="book_info">
-            <tr>
-              <th id="bookPrice" class="bookPrice">Price: 20€</th>
-              <th id="bookLikesAndLike" class="bookLikesAndLike"><span id="bookLikes" class="bookLikes">countLikes</span><input id="bookLike" class="bookLike" type="checkbox"></th>
-            </tr>
-            <tr>
-              <td>Author :</td>
-              <td id="bookAuthor" class="bookAuthor">Tobias Lendl</td>
-          
-            </tr>
-            <tr>
-              <td>Erscheinungsjahr :</td>
-              <td id="bookYearOfLaunch" class="bookYearOfLaunch">2014</td>
-          
-            </tr>
-            <tr>
-                <td>Genre :</td>
-                <td id="bookGenre" class="bookGenre">Fantasy</td>
-              </tr>
-          </table>
-          <section id="book_comments" class="book_comments">
-            <h3>Komentare</h3>
-                <p id="book_comments_window" class="book_comments_window">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, ipsum voluptate sequi natus distinctio nemo quae fugit ab. Velit commodi earum alias maiores unde explicabo id mollitia quam porro eius quibusdam modi ipsum animi asperiores officia sapiente voluptatem praesentium culpa iure accusamus, consequuntur placeat necessitatibus, tenetur ducimus. A similique laudantium nihil culpa quaerat inventore, aliquam doloremque eius soluta illum unde, non ullam maxime incidunt nulla sunt eos iusto sequi consequuntur aperiam, quod aut molestias voluptas suscipit! Pariatur dolor laudantium asperiores vero minus iure explicabo libero ducimus accusantium ea voluptate veniam totam quos, quibusdam repudiandae obcaecati molestiae nam aliquam itaque dicta?</p>
-          </section>
-          <div> <a href="#" id="book_input_comment_button" class="book_input_comment_button"><input type="text" id="book_input_comment" class="book_input_comment" placeholder="add a comment">X</a></div>      
-    </div> -->
 
-    <footer>
-        <span class="footer_span">Copyright 2025 By Branislav<sup>®</sup></span>
-    </footer>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookstore</title>
+  <link rel="icon" href="./assets/icons/book_logo.ico">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./styles/standard.css">
+  <link rel="stylesheet" href="./fonts/fonts.css">
+  <script src="./scripts/localstorage.js"></script>
+  <script src="./scripts/db.js"></script>
+  <script src="./scripts/templates.js"></script>
+  <script src="./scripts/events.js"></script>
+  <script src="./script.js"></script>
+</head>
+
+<body onload="startRender()">
+  <nav>
+    <div class="nav_div">
+      <img class="nav_image" src="./assets/img/book_logo.svg" alt="favicon">
+      <span class="nav_span">Bookstore</span>
+    </div>
+  </nav>
+  <div class="maxWidth">
+    <section id="renderSection" class="renderSection"></section>
+    <div id="bookRenderTemplateSection" class="bookRenderTemplateSection"></div>
+  </div>
+  <footer>
+    <span class="footer_span">Copyright 2025 By Branislav<sup>®</sup></span>
+  </footer>
 </body>
+
 </html>

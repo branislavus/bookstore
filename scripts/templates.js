@@ -11,7 +11,7 @@ function getBookTemplate(name, author, likes, liked, price, publishedYear, genre
               <th id="bookPrice" class="bookPrice">${price} €</th>
               <th id="bookLikesAndLike" class="bookLikesAndLike">
               <span id="bookLikes" class="bookLikes">${likes}  </span>
-              <input onclick="countLikes(${bookIndex})" id="bookLike" class="bookLike" type="checkbox"  value="${liked}"></th>
+              <a onclick="countLikes(${bookIndex})" id="bookLike" class="bookLike" value="${liked}"><img id="likeImage" class="likeImage" src="./assets/icons/dontLove.png" alt=like Image"></a>
             </tr>
             <tr>
               <td>Author :</td>
@@ -33,10 +33,9 @@ function getBookTemplate(name, author, likes, liked, price, publishedYear, genre
             </div>         
           </section >
           <div class="book_input onload="renderCommentWindow(${name})">
-          <input type="text" id="book_input_comment_nick" class="book_input_comment_nick" placeholder="nickname" required>
-          <input type="text" id="book_input_comment" class="book_input_comment" placeholder="comment" required>
-          <a href="#" id="book_input_comment_button" class="book_input_comment_button" onclick="getCommentToDB(${bookIndex})">X</a>
-          </div>      
+          <input type="text" id="book_input_comment_nick" class="book_input_comment_nick" placeholder="Nickname" required>
+          <input type="text" id="book_input_comment" class="book_input_comment" placeholder="schreibe uns dein Komentar" required>
+          <button id="book_input_comment_button" class="book_input_comment_button" onclick="getCommentToDB(${bookIndex})">Senden</button>    
     </div>`;
 }
 

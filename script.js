@@ -11,7 +11,8 @@ function startRender() {
     let author = books[bookIndex].author;
     let likes = books[bookIndex].likes;
     let liked = books[bookIndex].liked;
-    let price = books[bookIndex].price;
+    let priced = (books[bookIndex].price);
+let price = parseFloat(priced).toFixed(2);
     let publishedYear = books[bookIndex].publishedYear;
     let genre = books[bookIndex].genre;
     let commentText = "";
@@ -30,31 +31,40 @@ function getCommentToDB(bookIndex) {
   let input_nick = book_input_comment_nickRef.value;
   let book_input_commentRef = document.getElementById('book_input_comment');
   let input_comment = book_input_commentRef.value;
+  if(input_nick == "" && input_comment == ""){
+    return alert(" Sie müssen die Felder ausfüllen!!!")
+  }else{
+    let pushArray = { name: input_nick, comment: input_comment };
+    books[bookIndex].comments.unshift(pushArray);
+    startRender();
+  }
 
-  let pushArray = { name: input_nick, comment: input_comment };
-  books[bookIndex].comments.unshift(pushArray);
-  startRender();
+
   input_nick.value = "";
   input_comment.value = "";
 }
 
 function countLikes(valueIndex) {
-  let bookLikes = document.getElementById('bookLikes');
+  let likeButton = document.getElementById("likeImage");
   let bookLike = document.getElementById('bookLike');
   if (books[valueIndex].liked == true) {
     books[valueIndex].liked = false;
     if (bookLike) {
       bookLike.checked = false;
-      books[valueIndex].likes -= 1;
+      books[valueIndex].likes -= 1;   
     }
-    startRender()
+    likeButton.classList.remove("likeImage");
+    likeButton.classList.add("dontLikeImage");
+    startRender();
   } else {
     books[valueIndex].liked = true;
     if (bookLike) {
       bookLike.checked = true;
       books[valueIndex].likes += 1;
     }
-    startRender()
+    likeButton.classList.remove('dontLikeImage');
+    likeButton.classList.add("likeImage");
+    startRender();
   }
 }
 

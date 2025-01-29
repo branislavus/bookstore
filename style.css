@@ -8,12 +8,22 @@
     opacity: 0.4;
 }
 
+.maxWidth {
+    height: 100%;
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+   
+}
+
 body {
+    width: 100%;
     font-family: 'Raleway';
     background-color: #05171e;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
 }
 
 h1 {
@@ -33,6 +43,7 @@ h3 {
 
 nav {
     height: 180px;
+    width: 100%;
     background-color: #082129;
     display: flex;
     flex-direction: row;
@@ -42,11 +53,11 @@ nav {
 .nav_div {
     height: 100%;
     width: 100%;
-    max-width: 1920px;
+    max-width: 1440px;
     display: flex;
     flex-direction: row;
     justify-content: start;
-    align-items: center;
+
 }
 
 
@@ -68,14 +79,17 @@ nav {
     padding-right: 60px;
 }
 
-.bookRenderTemplateSection{
+.bookRenderTemplateSection {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-.upperSection{
+.upperSection {
     display: flex;
+    justify-content: center;
 }
 
 .renderSection {
@@ -86,15 +100,17 @@ nav {
 }
 
 .singleBookElement {
+    display: flex;
+    justify-content: center;
     height: 500px;
     width: 300px;
-    background: linear-gradient(50deg,  black, #252525);
+    background: linear-gradient(50deg, black, #252525);
     display: flex;
     flex-direction: column;
     justify-content: center;
     border-radius: 12px;
     padding: 10px;
-    margin-top: 20px;
+    margin: 20px;
     border: #2d7b9a 2px solid;
     box-shadow: 2px 1px 6px 3px lightblue;
 }
@@ -117,21 +133,50 @@ nav {
     text-align: justify;
 }
 
-#book_info th:first{
- text-align:justify;
+#book_info th:first {
+    text-align: justify;
 }
 
 .book_picture {
     height: 50px;
     width: 50px;
     margin: 10px;
-    border-radius: 0 8px 0 8px ;
+    border-radius: 0 8px 0 8px;
+}
+
+.likeImage {
+    width: 40px;
+    height: 40px;
+    background: #1b4a5d;
+    border-radius: 20px;
+}
+
+.likeImage:hover {
+    width: 40px;
+    height: 40px;
+    background: #246680;
+    border-radius: 20px;
+}
+
+.dontLikeImage {
+    width: 40px;
+    height: 40px;
+    background: #c90101;
+    border-radius: 20px;
+}
+
+.dontLikeImage:hover {
+    width: 40px;
+    height: 40px;
+    background: #c45959;
+    border-radius: 20px;
 }
 
 .book_comments {
     color: #2d7b9a;
     border-radius: 8px;
-    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     display: flex;
     flex-direction: column;
     background-color: lightblue;
@@ -143,8 +188,8 @@ nav {
     border: #2d7b9a 2px solid;
 }
 
-.book_comments_window{
-    height: 150px;
+.book_comments_window {
+    height: 196px;
     font-size: 14px;
 }
 
@@ -164,36 +209,58 @@ nav {
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
     border-radius: 4px;
 }
 
 .book_input_comment_nick {
-    width: 72px;
-    height: 24px;
+    border: #1b4a5d 2px solid;
+    width: 274px;
+
     border-radius: 4px;
     text-align: center;
+    color: #1b4a5d;
+}
+
+.book_input_comment_nick:hover {
+    width: 274px;
+
+    border-radius: 4px;
+    text-align: center;
+    color: #1b4a5d;
+    border: #1db5f1 2px solid;
+    color: aliceblue;
+    background-color: #0f2a35;
 }
 
 .book_input_comment {
-    height: 24px;
+    width: 274px;
+    border: #1b4a5d 2px solid;
     border-radius: 4px;
     text-align: center;
+    color: #1b4a5d;
+}
+
+.book_input_comment:hover {
+    width: 274px;
+    border-radius: 4px;
+    text-align: center;
+    color: #1b4a5d;
+    border: #1db5f1 2px solid;
+    color: aliceblue;
+    background-color: #0f2a35;
 }
 
 .book_input_comment_button {
-    width: 32px;
-    height: 24px;
+    width: 274px;
     border: #1b4a5d 2px solid;
     border-radius: 4px;
-    color: aliceblue;
+    color: #1b4a5d;
     text-align: center;
-
 }
 
 .book_input_comment_button:hover {
-    width: 32px;
-    height: 24px;
+    width: 274px;
     border: #1db5f1 2px solid;
     border-radius: 4px;
     color: aliceblue;
