@@ -33,8 +33,8 @@ function getBookTemplate(name, author, likes, liked, price, publishedYear, genre
             </div>         
           </section >
           <div class="book_input onload="renderCommentWindow(${name})">
-          <input type="text" id="book_input_comment_nick" class="book_input_comment_nick" placeholder="Nickname" required>
-          <input type="text" id="book_input_comment" class="book_input_comment" placeholder="schreibe uns dein Komentar" required>
+          <input type="text" id="book_input_comment_nick${bookIndex}" class="book_input_comment_nick" placeholder="Nickname" required>
+          <input type="text" id="book_input_comment${bookIndex}" class="book_input_comment" placeholder="schreibe uns dein Komentar" required>
           <button id="book_input_comment_button" class="book_input_comment_button" onclick="getCommentToDB(${bookIndex})">Senden</button>    
     </div>`;
 }

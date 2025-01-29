@@ -15,7 +15,18 @@
 //     render();
 //     inputRef.value = "";
 // }
+function saveToLocalStorage(){
+    localStorage.setItem("books", JSON.stringify(books));
+}
 
+function getFromLocalStorage(){
+    let myBooks = JSON.parse(localStorage.getItem("books"));
+    if(myBooks == null){
+        myBooks = books;
+      }else{
+        books = myBooks;
+      } 
+}
 // function saveToLocalStorage(){
 //     localStorage.setItem("notes", JSON.stringify(notes));
 //     localStorage.setItem("notesTitles", JSON.stringify(notesTitles));
