@@ -10,8 +10,9 @@ function getBookTemplate(name, author, likes, liked, price, publishedYear, genre
             <tr>
               <th id="bookPrice" class="bookPrice">${price} €</th>
               <th id="bookLikesAndLike" class="bookLikesAndLike">
-              <span id="bookLikes" class="bookLikes">${likes}  </span>
-              <a onclick="countLikes(${bookIndex})" id="bookLike" class="bookLike" value="${liked}"><img id="likeImage" class="likeImage" src="./assets/icons/dontLove.png" alt=like Image"></a>
+              <span id="bookLikes${bookIndex}" class="bookLikes">${likes}  </span>
+              <a id="bookLike" class="bookLike" onclick="toggleLikes(${bookIndex})" value="${liked}"><img 
+              id="likeImage${bookIndex}" class="likeImage" src="./assets/icons/dontLove.png" alt=like Image"></a>
             </tr>
             <tr>
               <td>Author :</td>

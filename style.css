@@ -161,14 +161,14 @@ nav {
 .dontLikeImage {
     width: 40px;
     height: 40px;
-    background: #c90101;
+    background: #c45959;
     border-radius: 20px;
 }
 
 .dontLikeImage:hover {
     width: 40px;
     height: 40px;
-    background: #c45959;
+    background: #c17171;
     border-radius: 20px;
 }
 
